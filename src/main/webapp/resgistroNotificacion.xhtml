@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+
+	<h1>ENVIAR NOTIFICACION</h1>
+	
+	<h:form>
+	
+	<h:panelGrid columns="3">
+		<h:outputLabel for="txtnombreEnvia" value="nombreEnvia" />
+		<h:inputText id="txtnombreEnvia" value="#{notificacionBean.newNotificacion.nombreEnvia}" />
+		<h:messages for="txtnombreEnvia"/>
+		
+ 		
+		<h:outputLabel for="txtDestinario" value="destinario" />
+		<h:inputText id="txtDestinario" value="#{notificacionBean.newNotificacion.destinario}" />
+		<h:messages for="txtDestinario"/>
+		
+		<h:outputLabel for="txtMensaje" value="mensaje" />
+		<h:inputText id="txtMensaje" value="#{notificacionBean.newNotificacion.mensaje}" />
+		<h:messages for="txtMensaje"/>
+		
+		<h:outputLabel value="" />
+		<h:commandButton action="#{notificacionBean.doGuardar()}" value="Guardar"/>
+	
+	
+	</h:panelGrid>
+	
+	
+	</h:form>
+	
+</body> 
+</html>

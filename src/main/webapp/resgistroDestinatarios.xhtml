@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+
+	<h1>REGISTRAR DESTINATARIOS</h1>
+	
+	<h:form>
+	
+	<h:panelGrid columns="3">
+		
+		<h:outputLabel for="txtId" value="id" />
+		<h:inputText id="txtId" value="#{destinarioBean.newDestinario.id}" />
+		<h:messages for="txtId"/>
+		
+		<h:outputLabel for="txtnombreDestinario" value="nombreDestinario" />
+		<h:inputText id="nombreDestinario" value="#{destinarioBean.newDestinario.nombreDestinario}" />
+		<h:messages for="nombreDestinario"/>
+		
+		<h:outputLabel for="txtTelefono" value="telefono" />
+		<h:inputText id="txtTelefono" value="#{destinarioBean.newDestinario.telefono}" />
+		<h:messages for="txtTelefono"/>
+		
+		<h:outputLabel value="" />
+		<h:commandButton action="#{destinarioBean.doGuardar()}" value="Guardar"/>
+	
+	
+	</h:panelGrid>
+	
+	
+	</h:form>
+	
+</body> 
+</html>
